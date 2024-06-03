@@ -1,0 +1,19 @@
+#include <cctype>
+#include <iostream>
+
+int	main(int argc, char *argv[])
+{
+	std::string str;
+	if (argc == 1)
+		str = "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+	else
+	{
+		// コマンドライン引数の各文字をstring型strに格納する
+		for (int i = 1; argv[i]; i++)
+			str += argv[i];
+		// strの各文字を大文字にしていく
+		for (std::size_t i = 0; i < str.length(); i++)
+			str[i] = (char)toupper(str[i]);
+	}
+	std::cout << str << std::endl;
+}
