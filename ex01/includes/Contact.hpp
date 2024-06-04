@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:36:34 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/04 16:46:00 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/04 19:01:43 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define CONTACT_HPP
 
 # include <string>
+
+#define FIRST_NAME_PROMPT "first name:\t"
+#define LAST_NAME_PROMPT "last name:\t"
+#define NICKNAME_PROMPT "nickname:\t"
+#define PHONE_NUMBER_PROMPT "phone number:\t"
+#define DARKEST_SECRET_PROMPT "darkest secret:\t"
 
 class Contact
 {

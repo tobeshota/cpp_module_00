@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:36:14 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/04 17:36:47 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/04 19:01:38 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,27 @@
 
 void Contact::input_first_name(void)
 {
-	this->m_first_name = input("first name:\t");
+	this->m_first_name = input(FIRST_NAME_PROMPT);
 }
 
 void Contact::input_last_name(void)
 {
-	this->m_last_name = input("last name:\t");
+	this->m_last_name = input(LAST_NAME_PROMPT);
 }
 
 void Contact::input_nickname(void)
 {
-	this->m_nickname = input("nickname:\t");
+	this->m_nickname = input(NICKNAME_PROMPT);
 }
 
 void Contact::input_phone_number(void)
 {
-	this->m_phone_number = input("phone number:\t");
+	this->m_phone_number = input(PHONE_NUMBER_PROMPT);
 }
 
 void Contact::input_darkest_secret(void)
 {
-	this->m_darkest_secret = input("darkest secret:\t");
+	this->m_darkest_secret = input(DARKEST_SECRET_PROMPT);
 }
 
 std::string Contact::get_first_name(void) const
