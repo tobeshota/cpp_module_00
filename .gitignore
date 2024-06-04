@@ -5,6 +5,8 @@
 
 # output files
 *.out
+megaphone
+phonebook
 
 # object files
 *.o

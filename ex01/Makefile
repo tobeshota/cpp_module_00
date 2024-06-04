@@ -1,0 +1,44 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: toshota <toshota@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/06/03 16:13:09 by toshota           #+#    #+#              #
+#    Updated: 2024/06/04 14:47:03 by toshota          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME		=	phonebook
+CC			=	c++
+FLAGS		=	-Wall -Wextra -Werror -std=c++98
+RM			=	rm -rf
+INCS		=	-I includes/
+SRCS_DIR	=	srcs/
+OBJS_DIR	=	objs/
+
+SRCS_FILES	=	Contact.cpp PhoneBook.cpp Utils.cpp main.cpp
+
+SRCS		=	$(addprefix $(SRCS_DIR), $(SRCS_FILES))
+OBJS		=	$(patsubst $(SRCS_DIR)%.cpp, $(OBJS_DIR)%.o, $(SRCS))
+
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CC) $(FLAGS) $(INCS) $(OBJS) -o $@
+
+$(OBJS_DIR)%.o : $(SRCS_DIR)%.cpp
+	mkdir -p $(@D)
+	$(CC) $(FLAGS) $(INCS) -c $< -o $@
+
+clean:
+	$(RM) $(OBJS_DIR)
+
+fclean:
+	$(RM) $(OBJS_DIR) $(NAME)
+
+re:		fclean all
+
+.PHONY:	all clean fclean re

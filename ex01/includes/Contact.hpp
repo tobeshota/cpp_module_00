@@ -1,0 +1,46 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/04 13:36:34 by toshota           #+#    #+#             */
+/*   Updated: 2024/06/04 16:46:00 by toshota          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
+
+# include <string>
+
+class Contact
+{
+  private:
+	std::string m_first_name;
+	std::string m_last_name;
+	std::string m_nickname;
+	std::string m_phone_number;
+	std::string m_darkest_secret;
+  public:
+	void set();
+	void input_first_name();
+	void input_last_name();
+	void input_nickname();
+	void input_phone_number();
+	void input_darkest_secret();
+
+	std::string get_first_name() const;
+	std::string get_last_name() const;
+	std::string get_nickname() const;
+	std::string get_phone_number() const;
+	std::string get_darkest_secret() const;
+};
+
+
+/*
+クラスでpublicの変数はほぼ見ない．クラスの外から値を変更しようとするとき，publicを用いる．
+値を見たいときは，publicでget_first_name();を用いて出すようにする．
+ */
+#endif
