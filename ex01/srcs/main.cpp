@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tobeshota <tobeshota@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 17:41:03 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/04 17:45:56 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/05 11:08:27 by tobeshota        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 int main(void)
 {
 	std::string cmd;
-	Contact contact;
 	PhoneBook phonebook;
 
 	std::cout << README << std::endl;
@@ -25,6 +24,7 @@ int main(void)
 		cmd = input(PROMPT);
 		if (cmd == "ADD")
 		{
+			Contact contact;
 			contact.set();
 			phonebook.Add(contact);
 		}

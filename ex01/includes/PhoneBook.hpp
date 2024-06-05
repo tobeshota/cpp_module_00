@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tobeshota <tobeshota@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:58:49 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/04 19:42:09 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/05 09:36:00 by tobeshota        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@
 # include <iomanip> //	std::setw(10)
 # include <iostream>
 # define SEARCH_PROMPT "\x1b[32mSEARCH $ \x1b[39m"
+#define MAX_CONTACTS_INDEX 8
 
 class PhoneBook
 {
   private:
-	Contact m_contact[8];
+	Contact m_contact[MAX_CONTACTS_INDEX];
 	int m_old_index; //	格納するcontactは8個である．9以降は最も古いインデックスold_indexのcontactと置き換える
   public:
 	PhoneBook(void);

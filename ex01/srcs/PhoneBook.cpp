@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tobeshota <tobeshota@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:14:29 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/04 19:29:35 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/05 10:37:44 by tobeshota        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 void PhoneBook::Add(const Contact contact)
 {
 	this->m_contact[m_old_index] = contact;
-	m_old_index = (m_old_index + 1) % 8;
+	m_old_index = (m_old_index + 1) % MAX_CONTACTS_INDEX;
 }
 
 // 文字列を10文字長で省略して返す
@@ -42,7 +42,7 @@ void PhoneBook::put_phone_book(void) const
 	std::cout << RULED_LINE << std::endl;
 	std::cout << TABLE_HEADER << std::endl;
 	std::cout << RULED_LINE << std::endl;
-	for (int i = 0; i < 8; i++)
+	for (int i = 0; i < MAX_CONTACTS_INDEX; i++)
 	{
 		std::cout << "|" << std::setw(10) << i + 1 << "|";
 		std::cout << std::setw(10) << get_in_10length(this->m_contact[i].get_first_name()) << "|";
@@ -70,6 +70,11 @@ void PhoneBook::Search(void) const
 {
 	int index;
 
+	if (this->m_contact[0].get_first_name().empty())
+	{
+		std::cout << "Nothing added" << std::endl;
+		return;
+	}
 	put_phone_book();
 	index = string_to_int(input(SEARCH_PROMPT));
 	if (index >= 1 && index <= 8)
