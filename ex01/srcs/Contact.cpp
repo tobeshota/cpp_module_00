@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tobeshota <tobeshota@student.42.fr>        +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:36:14 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/05 11:06:58 by tobeshota        ###   ########.fr       */
+/*   Updated: 2024/06/05 13:22:44 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,31 +15,31 @@
 
 void Contact::input_first_name(void)
 {
-	while(this->m_first_name.empty())
+	while(this->m_first_name.empty() || !is_str_only_space(this->m_first_name))
 		this->m_first_name = input(FIRST_NAME_PROMPT);
 }
 
 void Contact::input_last_name(void)
 {
-	while(this->m_last_name.empty())
+	while(this->m_last_name.empty() || !is_str_only_space(this->m_last_name))
 		this->m_last_name = input(LAST_NAME_PROMPT);
 }
 
 void Contact::input_nickname(void)
 {
-	while(this->m_nickname.empty())
+	while(this->m_nickname.empty() || !is_str_only_space(this->m_nickname))
 		this->m_nickname = input(NICKNAME_PROMPT);
 }
 
 void Contact::input_phone_number(void)
 {
-	while(this->m_phone_number.empty() || !is_str_phone_number(this->m_phone_number))
+	while(this->m_phone_number.empty() || !is_str_only_space(this->m_phone_number) || !is_str_phone_number(this->m_phone_number))
 		this->m_phone_number = input(PHONE_NUMBER_PROMPT);
 }
 
 void Contact::input_darkest_secret(void)
 {
-	while(this->m_darkest_secret.empty())
+	while(this->m_darkest_secret.empty() || !is_str_only_space(this->m_darkest_secret))
 		this->m_darkest_secret = input(DARKEST_SECRET_PROMPT);
 }
 
