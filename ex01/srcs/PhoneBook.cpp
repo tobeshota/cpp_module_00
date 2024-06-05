@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tobeshota <tobeshota@student.42.fr>        +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:14:29 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/05 10:37:44 by tobeshota        ###   ########.fr       */
+/*   Updated: 2024/06/05 11:14:20 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void PhoneBook::Search(void) const
 	}
 	put_phone_book();
 	index = string_to_int(input(SEARCH_PROMPT));
-	if (index >= 1 && index <= 8)
+	if (index >= 1 && index <= MAX_CONTACTS_INDEX)
 		put_search_target(index);
 }
 
