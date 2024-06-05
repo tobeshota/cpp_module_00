@@ -6,13 +6,13 @@
 #    By: toshota <toshota@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/03 16:13:09 by toshota           #+#    #+#              #
-#    Updated: 2024/06/04 14:47:03 by toshota          ###   ########.fr        #
+#    Updated: 2024/06/05 12:23:26 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	phonebook
 CC			=	c++
-FLAGS		=	-Wall -Wextra -Werror -std=c++98
+FLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic-errors
 RM			=	rm -rf
 INCS		=	-I includes/
 SRCS_DIR	=	srcs/

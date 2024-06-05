@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Utils.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tobeshota <tobeshota@student.42.fr>        +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:36:39 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/05 10:54:18 by tobeshota        ###   ########.fr       */
+/*   Updated: 2024/06/05 12:24:15 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 typedef enum s_exit_status
 {
 	NORMAL,
-	ERROR,
+	ERROR
 }		t_exit_status;
 
 void	exit_with_msg(const std::string msg, const int exit_status);
