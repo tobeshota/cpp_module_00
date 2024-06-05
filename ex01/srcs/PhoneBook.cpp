@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:14:29 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/05 11:14:20 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/05 11:45:05 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,4 @@ void PhoneBook::Search(void) const
 		put_search_target(index);
 }
 
-PhoneBook::PhoneBook(void)
-{
-	m_old_index = 0;
-}
+PhoneBook::PhoneBook(void) : m_old_index(0) {}

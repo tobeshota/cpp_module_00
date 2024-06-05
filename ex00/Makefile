@@ -6,13 +6,13 @@
 #    By: toshota <toshota@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/03 16:13:09 by toshota           #+#    #+#              #
-#    Updated: 2024/06/03 16:51:45 by toshota          ###   ########.fr        #
+#    Updated: 2024/06/05 11:53:46 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	megaphone
 CC			=	c++
-FLAGS		=	-Wall -Wextra -Werror -std=c++98
+FLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic-errors
 RM			=	rm -rf
 
 SRCS_DIR	=	srcs/
