@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:36:14 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/05 13:22:44 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 19:13:44 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,9 @@ std::string Contact::get_darkest_secret(void) const
 // インスタンスcontentの各フィールドを標準入力から読み込む
 void Contact::set(void)
 {
-	input_first_name();
-	input_last_name();
-	input_nickname();
-	input_phone_number();
-	input_darkest_secret();
+	this->input_first_name();
+	this->input_last_name();
+	this->input_nickname();
+	this->input_phone_number();
+	this->input_darkest_secret();
 }

@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:36:34 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/04 19:01:43 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 19:13:09 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ class Contact
 	std::string m_nickname;
 	std::string m_phone_number;
 	std::string m_darkest_secret;
-  public:
-	void set();
 	void input_first_name();
 	void input_last_name();
 	void input_nickname();
 	void input_phone_number();
 	void input_darkest_secret();
+  public:
+	void set();
 
 	std::string get_first_name() const;
 	std::string get_last_name() const;
