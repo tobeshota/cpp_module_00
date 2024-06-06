@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:38:01 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 20:02:59 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:10:38 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,6 @@ static bool can_str_print(std::string str)
 			return (false);
 	}
 	return (true);
-}
-
-// 文字列型がスペースのみで構成されているかを判定する
-bool is_str_only_space(std::string str)
-{
-	for (int i = 0; str[i]; i++)
-	{
-		if (std::isspace(str[i]) == 0)
-			return (true);
-	}
-	return (false);
 }
 
 // 標準入力からString型の文字列を取得する

@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:36:39 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 20:03:34 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:08:38 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,5 @@ typedef enum s_exit_status
 void	exit_with_msg(const std::string msg, const int exit_status);
 std::string input(const std::string prompt);
 int	string_to_int(const std::string &str);
-bool is_str_only_space(std::string str);
 
 #endif

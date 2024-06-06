@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:36:14 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 20:05:20 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:08:24 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,17 @@ bool Contact::is_str_number(const std::string str) const
 			return (false);
 	}
 	return (true);
+}
+
+// 文字列型がスペースのみで構成されているかを判定する
+bool Contact::is_str_only_space(std::string str) const
+{
+	for (int i = 0; str[i]; i++)
+	{
+		if (std::isspace(str[i]) == 0)
+			return (true);
+	}
+	return (false);
 }
 
 // インスタンスcontentの各フィールドを標準入力から読み込む
