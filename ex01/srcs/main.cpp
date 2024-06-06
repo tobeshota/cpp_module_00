@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 17:41:03 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 19:31:56 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 19:33:10 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,10 @@ int main(void)
 	{
 		cmd = input(PROMPT);
 		if (cmd == "ADD")
-		{
-			phonebook.Add();
-		}
+			phonebook.add();
 		else if (cmd == "SEARCH")
-		{
-			phonebook.Search();
-		}
+			phonebook.search();
 		else if (cmd == "EXIT")
-		{
-			phonebook.Exit();
-		}
+			phonebook.exit();
 	}
 }

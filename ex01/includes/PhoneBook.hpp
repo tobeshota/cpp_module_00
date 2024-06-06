@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:58:49 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 19:30:57 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 19:33:10 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ class PhoneBook
 	int m_old_index; //	格納するcontactは8個である．9以降は最も古いインデックスold_indexのcontactと置き換える
   public:
 	PhoneBook(void);
-	void Add(void);
-	void Search(void) const;
-	void Exit(void) const;
+	void add(void);
+	void search(void) const;
+	void exit(void) const;
 	void put_phone_book(void) const;
 	void put_search_target(const int index) const;
 };

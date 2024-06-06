@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:14:29 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 19:31:23 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 19:33:10 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 /* 新しいcontentを保存する
  * 8個までは格納するだけ．8個以降は最も古いcontentを置き換える
  */
-void PhoneBook::Add(void)
+void PhoneBook::add(void)
 {
 	Contact contact;
 	contact.set();
@@ -69,7 +69,7 @@ void PhoneBook::put_search_target(const int index) const
  * 電話帳を一覧で表示する
  * 指定されたインデックスの各フィールドを出力する
  */
-void PhoneBook::Search(void) const
+void PhoneBook::search(void) const
 {
 	int index;
 
@@ -84,7 +84,7 @@ void PhoneBook::Search(void) const
 		put_search_target(index);
 }
 
-void PhoneBook::Exit(void) const
+void PhoneBook::exit(void) const
 {
 	exit_with_msg("exit", NORMAL);
 }
