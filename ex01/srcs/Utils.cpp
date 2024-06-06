@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:38:01 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 19:29:23 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:02:59 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static bool can_str_print(std::string str)
 {
 	for (int i = 0; str[i]; i++)
 	{
-		if (!isprint(str[i]))
+		if (std::isprint(str[i]) == 0)
 			return (false);
 	}
 	return (true);
@@ -34,7 +34,7 @@ bool is_str_only_space(std::string str)
 {
 	for (int i = 0; str[i]; i++)
 	{
-		if (isspace(str[i]) == 0)
+		if (std::isspace(str[i]) == 0)
 			return (true);
 	}
 	return (false);
@@ -50,17 +50,6 @@ std::string input(const std::string prompt)
 	if (std::cin.eof() || std::cin.fail() || can_str_print(cmd) == false)
 		exit_with_msg("Error", ERROR);
 	return (cmd);
-}
-
-// 入力文字が数値またはハイフンかを調べる
-bool is_str_phone_number(const std::string str)
-{
-	for (int i = 0; str[i]; i++)
-	{
-		if (!isnumber(str[i]) && str[i] != '-')
-			return (false);
-	}
-	return (true);
 }
 
 int	string_to_int(const std::string &str)

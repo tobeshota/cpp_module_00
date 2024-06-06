@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:36:34 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 19:13:09 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:02:44 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class Contact
 	void input_nickname();
 	void input_phone_number();
 	void input_darkest_secret();
+	bool is_str_number(const std::string str) const;
   public:
 	void set();
 

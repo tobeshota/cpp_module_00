@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:36:14 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 19:13:44 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:03:22 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void Contact::input_nickname(void)
 
 void Contact::input_phone_number(void)
 {
-	while(this->m_phone_number.empty() || !is_str_only_space(this->m_phone_number) || !is_str_phone_number(this->m_phone_number))
+	while(this->m_phone_number.empty() || !is_str_only_space(this->m_phone_number) || !is_str_number(this->m_phone_number))
 		this->m_phone_number = input(PHONE_NUMBER_PROMPT);
 }
 
@@ -66,6 +66,18 @@ std::string Contact::get_phone_number(void) const
 std::string Contact::get_darkest_secret(void) const
 {
 	return (this->m_darkest_secret);
+}
+
+// 入力文字が数値であるかを調べる
+
+bool Contact::is_str_number(const std::string str) const
+{
+	for (int i = 0; str[i]; i++)
+	{
+		if (std::isdigit(str[i]) == 0)
+			return (false);
+	}
+	return (true);
 }
 
 // インスタンスcontentの各フィールドを標準入力から読み込む

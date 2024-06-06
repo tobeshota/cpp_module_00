@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:36:39 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 19:29:00 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:03:34 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ void	exit_with_msg(const std::string msg, const int exit_status);
 std::string input(const std::string prompt);
 int	string_to_int(const std::string &str);
 bool is_str_only_space(std::string str);
-bool is_str_phone_number(const std::string str);
 
 #endif

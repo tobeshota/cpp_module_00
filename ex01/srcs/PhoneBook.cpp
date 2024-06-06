@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:14:29 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 19:51:34 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:04:42 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,4 @@ void PhoneBook::exit(void) const
 	exit_with_msg("exit", NORMAL);
 }
 
-PhoneBook::PhoneBook(void)
-	: m_old_index(0)
-{
-}
+PhoneBook::PhoneBook(void) : m_old_index(0) {}
