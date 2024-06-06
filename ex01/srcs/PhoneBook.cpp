@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:14:29 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/05 11:45:05 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 19:17:02 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@
 /* 新しいcontentを保存する
  * 8個までは格納するだけ．8個以降は最も古いcontentを置き換える
  */
-void PhoneBook::Add(const Contact contact)
+void PhoneBook::Add(void)
 {
+	Contact contact;
+	contact.set();
+
 	this->m_contact[m_old_index] = contact;
 	m_old_index = (m_old_index + 1) % MAX_CONTACTS_INDEX;
 }

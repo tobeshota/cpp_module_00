@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tobeshota <tobeshota@student.42.fr>        +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 17:41:03 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/05 11:08:27 by tobeshota        ###   ########.fr       */
+/*   Updated: 2024/06/06 19:26:07 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ int main(void)
 		cmd = input(PROMPT);
 		if (cmd == "ADD")
 		{
-			Contact contact;
-			contact.set();
-			phonebook.Add(contact);
+			phonebook.Add();
 		}
 		else if (cmd == "SEARCH")
 		{
