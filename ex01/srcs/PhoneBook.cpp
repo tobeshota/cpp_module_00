@@ -6,20 +6,22 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:14:29 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 19:48:12 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 19:51:34 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #define TABLE_HEADER "|     index|first name| last name|  nickname|"
 #define RULED_LINE "- - - - - - - - - - - - - - - - - - - - - - -"
+#define MAX_COLUMN_WIDTH 10
 
 /* 新しいcontentを保存する
  * 8個までは格納するだけ．8個以降は最も古いcontentを置き換える
  */
 void PhoneBook::add(void)
 {
-	Contact contact;
+	Contact	contact;
+
 	contact.set();
 	this->m_contact[m_old_index] = contact;
 	m_old_index = (m_old_index + 1) % this->m_contact.max_size();
@@ -28,7 +30,7 @@ void PhoneBook::add(void)
 // 文字列を10文字長で省略して返す
 static std::string get_in_10length(std::string str)
 {
-	if (str.length() < 10)
+	if (str.length() < MAX_COLUMN_WIDTH)
 		return (str);
 	else
 		return (str.substr(0, 9) + ".");
@@ -57,11 +59,16 @@ void PhoneBook::put_phone_book(void) const
 
 void PhoneBook::put_search_target(const int index) const
 {
-	std::cout << FIRST_NAME_PROMPT << this->m_contact[index - 1].get_first_name() << std::endl;
-	std::cout << LAST_NAME_PROMPT << this->m_contact[index - 1].get_last_name() << std::endl;
-	std::cout << NICKNAME_PROMPT << this->m_contact[index - 1].get_nickname() << std::endl;
-	std::cout << PHONE_NUMBER_PROMPT << this->m_contact[index - 1].get_phone_number() << std::endl;
-	std::cout << DARKEST_SECRET_PROMPT << this->m_contact[index - 1].get_darkest_secret() << std::endl;
+	std::cout << FIRST_NAME_PROMPT << this->m_contact[index
+		- 1].get_first_name() << std::endl;
+	std::cout << LAST_NAME_PROMPT << this->m_contact[index
+		- 1].get_last_name() << std::endl;
+	std::cout << NICKNAME_PROMPT << this->m_contact[index
+		- 1].get_nickname() << std::endl;
+	std::cout << PHONE_NUMBER_PROMPT << this->m_contact[index
+		- 1].get_phone_number() << std::endl;
+	std::cout << DARKEST_SECRET_PROMPT << this->m_contact[index
+		- 1].get_darkest_secret() << std::endl;
 }
 
 /**
@@ -75,7 +82,7 @@ void PhoneBook::search(void) const
 	if (this->m_contact[0].get_first_name().empty())
 	{
 		std::cout << "Nothing added" << std::endl;
-		return;
+		return ;
 	}
 	put_phone_book();
 	index = string_to_int(input(SEARCH_PROMPT));
@@ -88,4 +95,7 @@ void PhoneBook::exit(void) const
 	exit_with_msg("exit", NORMAL);
 }
 
-PhoneBook::PhoneBook(void) : m_old_index(0) {}
+PhoneBook::PhoneBook(void)
+	: m_old_index(0)
+{
+}
