@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:14:29 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 20:05:40 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:15:44 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,17 @@ void PhoneBook::search(void) const
 	index = string_to_int(input(SEARCH_PROMPT));
 	if (index >= 1 && index <= MAX_CONTACTS_INDEX)
 		put_search_target(index);
+}
+
+// stoiの再実装．string型の文字列を数値として読み取り，int型の値に変換する
+int	PhoneBook::string_to_int(const std::string str) const
+{
+	int	result;
+
+	std::istringstream iss(str);
+	if (!(iss >> result))
+		return (-1);
+	return (result);
 }
 
 void PhoneBook::exit(void) const

@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:58:49 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 19:46:28 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:14:58 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class PhoneBook
 	int m_old_index; //	格納するcontactは8個である．9以降は最も古いインデックスold_indexのcontactと置き換える
 	void put_phone_book(void) const;
 	void put_search_target(const int index) const;
-
+	int	string_to_int(const std::string str) const;
   public:
 	PhoneBook(void);
 	void add(void);

@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:38:01 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 20:10:38 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:14:43 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,4 @@ std::string input(const std::string prompt)
 	if (std::cin.eof() || std::cin.fail() || can_str_print(cmd) == false)
 		exit_with_msg("Error", ERROR);
 	return (cmd);
-}
-
-int	string_to_int(const std::string &str)
-{
-	int	result;
-
-	std::istringstream iss(str);
-	if (!(iss >> result))
-		return (-1); // 数値形式ではない場合は0を返す
-	return (result);
 }
