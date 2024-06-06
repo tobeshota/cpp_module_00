@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:36:34 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 20:21:22 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:25:56 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class Contact
 	bool is_str_only_space(const std::string str) const;
 
   public:
-	void set();
+	void set(void);
 	std::string get_first_name(void) const;
 	std::string get_last_name(void) const;
 	std::string get_nickname(void) const;
