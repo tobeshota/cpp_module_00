@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:14:29 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 20:04:42 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:05:40 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,16 +59,11 @@ void PhoneBook::put_phone_book(void) const
 
 void PhoneBook::put_search_target(const int index) const
 {
-	std::cout << FIRST_NAME_PROMPT << this->m_contact[index
-		- 1].get_first_name() << std::endl;
-	std::cout << LAST_NAME_PROMPT << this->m_contact[index
-		- 1].get_last_name() << std::endl;
-	std::cout << NICKNAME_PROMPT << this->m_contact[index
-		- 1].get_nickname() << std::endl;
-	std::cout << PHONE_NUMBER_PROMPT << this->m_contact[index
-		- 1].get_phone_number() << std::endl;
-	std::cout << DARKEST_SECRET_PROMPT << this->m_contact[index
-		- 1].get_darkest_secret() << std::endl;
+	std::cout << FIRST_NAME_PROMPT << this->m_contact[index - 1].get_first_name() << std::endl;
+	std::cout << LAST_NAME_PROMPT << this->m_contact[index - 1].get_last_name() << std::endl;
+	std::cout << NICKNAME_PROMPT << this->m_contact[index - 1].get_nickname() << std::endl;
+	std::cout << PHONE_NUMBER_PROMPT << this->m_contact[index - 1].get_phone_number() << std::endl;
+	std::cout << DARKEST_SECRET_PROMPT << this->m_contact[index - 1].get_darkest_secret() << std::endl;
 }
 
 /**

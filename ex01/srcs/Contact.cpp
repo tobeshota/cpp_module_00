@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:36:14 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 20:03:22 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 20:05:20 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ std::string Contact::get_darkest_secret(void) const
 }
 
 // 入力文字が数値であるかを調べる
-
 bool Contact::is_str_number(const std::string str) const
 {
 	for (int i = 0; str[i]; i++)
