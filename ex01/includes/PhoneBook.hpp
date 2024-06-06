@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:58:49 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 19:17:08 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 19:30:57 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class PhoneBook
 	PhoneBook(void);
 	void Add(void);
 	void Search(void) const;
+	void Exit(void) const;
 	void put_phone_book(void) const;
 	void put_search_target(const int index) const;
 };

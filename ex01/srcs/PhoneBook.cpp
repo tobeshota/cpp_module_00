@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:14:29 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 19:17:02 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 19:31:23 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,11 @@ void PhoneBook::Search(void) const
 	index = string_to_int(input(SEARCH_PROMPT));
 	if (index >= 1 && index <= MAX_CONTACTS_INDEX)
 		put_search_target(index);
+}
+
+void PhoneBook::Exit(void) const
+{
+	exit_with_msg("exit", NORMAL);
 }
 
 PhoneBook::PhoneBook(void) : m_old_index(0) {}

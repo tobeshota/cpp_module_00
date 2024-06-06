@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:38:01 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/05 13:34:46 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 19:29:23 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void exit_with_msg(const std::string msg, const int exit_status)
 {
 	std::cerr << msg << std::endl;
-	exit(exit_status);
+	std::exit(exit_status);
 }
 
 // 文字列型が表示文字のみで構成されているかを判定する

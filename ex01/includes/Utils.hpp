@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:36:39 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/05 13:11:45 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 19:29:00 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 # include <iostream>
 #include <sstream>	//	std::istringstream
-#include <cctype> // isprint関数を使うために必要
+#include <cctype> 	//	isprint()
+#include <cstdlib>	//	std::exit(exit_status);
 # define PROMPT "\x1b[32m>$ \x1b[39m"
 # define README "phonebook supports: ADD, SEARCH, EXIT"
 
