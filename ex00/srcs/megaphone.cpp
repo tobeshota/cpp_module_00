@@ -6,11 +6,12 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 17:40:32 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/05 11:43:17 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/06 19:11:26 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cctype>	//	std::toupper()
 
 int	main(int argc, char *argv[])
 {
@@ -24,7 +25,7 @@ int	main(int argc, char *argv[])
 			str += argv[i];
 		// strの各文字を大文字にしていく
 		for (std::size_t i = 0; i < str.length(); i++)
-			str[i] = (char)toupper(str[i]);
+			str[i] = std::toupper(str[i]);
 	}
 	std::cout << str << std::endl;
 }
