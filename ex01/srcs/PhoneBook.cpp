@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:14:29 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 20:15:44 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/07 22:31:05 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void PhoneBook::add(void)
 
 	contact.set();
 	this->m_contact[m_old_index] = contact;
-	m_old_index = (m_old_index + 1) % this->m_contact.max_size();
+	m_old_index = (m_old_index + 1) % MAX_CONTACTS_INDEX;
 }
 
 // 文字列を10文字長で省略して返す

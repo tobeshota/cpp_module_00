@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:58:49 by toshota           #+#    #+#             */
-/*   Updated: 2024/06/06 20:22:00 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/07 22:31:41 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 class PhoneBook
 {
   private:
-	std::array<Contact, MAX_CONTACTS_INDEX> m_contact;
+	Contact m_contact[MAX_CONTACTS_INDEX];
 	int m_old_index;
 	void put_phone_book(void) const;
 	void put_search_target(const int index) const;
